@@ -2,8 +2,9 @@ name: Pull-Request Testing
 on:
   pull_request:
   workflow_dispatch:
-  permissions:
-    contents: read
+
+permissions:
+  contents: read
     
 jobs:
   build:
