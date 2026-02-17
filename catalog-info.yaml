@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: radix-ingress-default-backend
+  annotations:
+    github.com/project-slug: equinor/radix-ingress-default-backend
+spec:
+  type: other
+  lifecycle: unknown
+  owner: team-radix
