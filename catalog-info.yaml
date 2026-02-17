@@ -2,9 +2,12 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: radix-ingress-default-backend
+  title: Radix Ingress default backend
+  description: "Responds with a nice error page for Radix (and Equinor) based on the requested domain"
   annotations:
     github.com/project-slug: equinor/radix-ingress-default-backend
 spec:
-  type: other
-  lifecycle: unknown
+  type: service
+  lifecycle: production
   owner: team-radix
+  system: system:default/Radix
