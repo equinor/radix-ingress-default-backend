@@ -19,7 +19,7 @@ jobs:
       release_created: ${{steps.release.outputs.release_created }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: googleapis/release-please-action@v4
         id: release
 
@@ -31,7 +31,7 @@ jobs:
       IMAGE_NAME: ${{ github.repository }}
       TAG: ${{ needs.release-please.outputs.version }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -85,7 +85,7 @@ jobs:
     needs: release-please
     if: ${{needs.release-please.outputs.release_created == 'true'}}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0 # important parameter
 
