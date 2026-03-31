@@ -8,8 +8,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+
+	main "github.com/equinor/radix-ingress-default-backend"
 )
-import main "github.com/equinor/radix-ingress-default-backend"
 
 func TestRun(t *testing.T) {
 	router := main.NewRouter(main.NewBackendController())
@@ -53,7 +54,9 @@ func sendRequest(url, namespace, code string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	defer regularRequest.Body.Close()
+	defer func() {
+		_ = regularRequest.Body.Close()
+	}()
 
 	bytes, err := io.ReadAll(regularRequest.Body)
 	if err != nil {
