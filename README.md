@@ -1,8 +1,7 @@
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-green.svg)](https://conventionalcommits.org)
-[![Release](https://github.com/equinor/radix-ingress-default-backend/actions/workflows/release-please.yaml/badge.svg?branch=main&event=push)](https://github.com/equinor/radix-ingress-default-backend/actions/workflows/release-please.yaml)
-[![SCM Compliance](https://scm-compliance-api.radix.equinor.com/repos/equinor/radix-ingress-default-backend/badge)](https://developer.equinor.com/governance/scm-policy/)
-
 # Radix Ingress Defailt Backend
+
+> [!IMPORTANT]  
+> **Update, May 2026:** This repository is no longer maintained.
 
 Responds with a nice error page for Radix (and Equinor) based on the requested domain
 
